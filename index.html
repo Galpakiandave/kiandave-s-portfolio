@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kian's Work Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red: #e63b2e;
+      --dark: #0d0d0d;
+      --card: #1a1a1a;
+      --text: #f0ede8;
+      --muted: #888;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* HERO */
+    header {
+      border-bottom: 1px solid #2a2a2a;
+      padding: 60px 40px 50px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .label {
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(52px, 10vw, 96px);
+      line-height: 0.95;
+      letter-spacing: 0.02em;
+      color: var(--text);
+    }
+
+    h1 span { color: var(--red); }
+
+    .tagline {
+      margin-top: 20px;
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 480px;
+      line-height: 1.7;
+    }
+
+    .links {
+      display: flex;
+      gap: 16px;
+      margin-top: 28px;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border: 1px solid #333;
+      border-radius: 4px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 13px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .links a:hover { border-color: var(--red); color: var(--red); }
+
+    /* VIDEOS */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+
+    .videos-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    /* Regular video spans full width */
+    .video-card.wide {
+      grid-column: 1 / -1;
+    }
+
+    .video-card {
+      background: var(--card);
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #2a2a2a;
+    }
+
+    .video-card iframe {
+      width: 100%;
+      display: block;
+      border: none;
+    }
+
+    /* 16:9 for regular video */
+    .wide .ratio {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+    }
+
+    /* 9:16 for shorts */
+    .short .ratio {
+      position: relative;
+      padding-bottom: 177.78%;
+      height: 0;
+    }
+
+    .ratio iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+    }
+
+    .video-label {
+      padding: 12px 16px;
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    /* ABOUT */
+    .about {
+      margin-top: 60px;
+      padding-top: 60px;
+      border-top: 1px solid #2a2a2a;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .about h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 36px;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+
+    .about p {
+      font-size: 14px;
+      color: #aaa;
+      line-height: 1.8;
+    }
+
+    .tool-badge {
+      display: inline-block;
+      margin-top: 16px;
+      background: #222;
+      border: 1px solid #333;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      color: var(--text);
+    }
+
+    /* FOOTER */
+    footer {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px 40px;
+      border-top: 1px solid #1e1e1e;
+      font-size: 12px;
+      color: #444;
+    }
+
+    @media (max-width: 600px) {
+      header, main { padding: 40px 20px; }
+      .videos-grid { grid-template-columns: 1fr; }
+      .wide { grid-column: 1; }
+      .about { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="label">Video Editor · Portfolio</div>
+    <h1>Kian<br>Dave<br><span>Galpa</span></h1>
+    <p class="tagline">
+      Aspiring video editor with hands-on experience in CapCut.
+      Eager to learn, adapt, and deliver quality content on deadline.
+    </p>
+    <div class="links">
+      <a href="https://www.youtube.com/channel/UCL1SI7AZHW6D5e5EQr3jx2A" target="_blank">
+        ▶ YouTube Channel
+      </a>
+      <a href="https://www.facebook.com/kian.dave.galpa" target="_blank">
+        f Facebook
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div class="section-label">Selected Works</div>
+
+    <div class="videos-grid">
+
+      <!-- Regular YouTube video (16:9) -->
+      <div class="video-card wide">
+        <div class="ratio">
+          <iframe
+            src="https://www.youtube.com/embed/x-hpY1Z_a5I"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="video-label">Edit No. 01</div>
+      </div>
+
+      <!-- Short 1 (9:16 portrait) -->
+      <div class="video-card short">
+        <div class="ratio">
+          <iframe
+            src="https://www.youtube.com/embed/bHiDePUc_d0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="video-label">Short No. 01</div>
+      </div>
+
+      <!-- Short 2 (9:16 portrait) -->
+      <div class="video-card short">
+        <div class="ratio">
+          <iframe
+            src="https://www.youtube.com/embed/uB3j3lCyJuM"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="video-label">Short No. 02</div>
+      </div>
+
+    </div>
+
+    <!-- ABOUT -->
+    <div class="about">
+      <div>
+        <h2>About Me</h2>
+        <p>
+          I have about one month of editing experience, but I am committed to
+          putting in full effort to deliver satisfying videos for every client —
+          on time and to a high standard.
+        </p>
+        <span class="tool-badge">🎬 CapCut</span>
+      </div>
+      <div>
+        <h2>My Commitment</h2>
+        <p>
+          I am willing to learn everything needed for the job and will adapt
+          quickly to new tools, styles, and requirements.
+          Please consider my application — I am ready to grow with your team.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer>© 2025 Kian Dave Galpa · Video Portfolio</footer>
+
+</body>
+</html>
