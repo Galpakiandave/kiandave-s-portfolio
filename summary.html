@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Background Summary – Kian Dave Galpa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red: #e63b2e;
+      --dark: #0d0d0d;
+      --card: #1a1a1a;
+      --text: #f0ede8;
+      --muted: #888;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    header {
+      border-bottom: 1px solid #2a2a2a;
+      padding: 60px 40px 50px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .label {
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(52px, 10vw, 96px);
+      line-height: 0.95;
+      letter-spacing: 0.02em;
+    }
+
+    h1 span { color: var(--red); }
+
+    .tagline {
+      margin-top: 20px;
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 520px;
+      line-height: 1.7;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+
+    /* SUMMARY CARD */
+    .summary-card {
+      background: var(--card);
+      border: 1px solid #2a2a2a;
+      border-radius: 8px;
+      padding: 48px;
+    }
+
+    .summary-card .card-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 32px;
+      letter-spacing: 0.05em;
+      color: var(--text);
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #2a2a2a;
+    }
+
+    .summary-card p {
+      font-size: 14px;
+      font-weight: 300;
+      color: #b0aca5;
+      line-height: 1.95;
+      margin-bottom: 22px;
+    }
+
+    .summary-card p:last-child { margin-bottom: 0; }
+
+    .summary-card p .highlight {
+      color: var(--text);
+      font-weight: 500;
+      border-bottom: 1px solid var(--red);
+      padding-bottom: 1px;
+    }
+
+    /* STRENGTHS GRID */
+    .strengths-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 32px;
+      letter-spacing: 0.05em;
+      color: var(--text);
+      margin: 60px 0 24px;
+    }
+
+    .strengths-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+    }
+
+    .strength-card {
+      background: var(--card);
+      border: 1px solid #2a2a2a;
+      border-radius: 8px;
+      padding: 24px 22px;
+      transition: border-color 0.2s;
+    }
+
+    .strength-card:hover {
+      border-color: var(--red);
+    }
+
+    .strength-card .icon {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .strength-card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 18px;
+      letter-spacing: 0.05em;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .strength-card p {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    /* CLOSING QUOTE */
+    .quote-block {
+      margin-top: 48px;
+      border-left: 3px solid var(--red);
+      padding: 20px 28px;
+      background: var(--card);
+      border-radius: 0 8px 8px 0;
+    }
+
+    .quote-block p {
+      font-size: 15px;
+      font-style: italic;
+      color: #c0bbb4;
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    .quote-block .quote-author {
+      margin-top: 12px;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      font-style: normal;
+    }
+
+    footer {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px 40px;
+      border-top: 1px solid #1e1e1e;
+      font-size: 12px;
+      color: #444;
+    }
+
+    @media (max-width: 600px) {
+      header, main { padding: 40px 20px; }
+      .summary-card { padding: 28px 22px; }
+      .strengths-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 420px) {
+      .strengths-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="label">Background Summary · AI Data Annotator</div>
+    <h1>Kian<br>Dave<br><span>Galpa</span></h1>
+    <p class="tagline">
+      Fresh. Honest. Determined. No shortcuts, no pretending —
+      just a person who shows up, keeps going, and gives everything they've got.
+    </p>
+  </header>
+
+  <main>
+    <div class="section-label">About Me</div>
+
+    <div class="summary-card">
+      <div class="card-title">In My Own Words</div>
+
+      <p>
+        To be completely honest, I have <span class="highlight">no prior experience in data annotation</span> —
+        and I have no prior remote work experience either. I know that might not be what most people
+        want to read in a background summary. But I would rather be upfront about it than try to
+        dress it up as something it is not.
+      </p>
+
+      <p>
+        What I do have is something I believe matters just as much in the long run:
+        the <span class="highlight">right attitude and the determination to back it up</span>.
+        I am not someone who gives up when things get difficult or confusing. I take my time,
+        I study what needs to be studied, I ask when I need to ask, and I keep at it until
+        I get it right. Patience is something I have naturally — I do not rush, and I do not panic.
+      </p>
+
+      <p>
+        I am also someone who <span class="highlight">does not let emotions get in the way</span> of the work.
+        Whether feedback is tough or a task is repetitive and slow, I stay level-headed and focused.
+        I am easy to work with — friendly, open, and the kind of person who lifts the mood rather
+        than draining it. Getting along with people comes naturally to me, and I genuinely care
+        about doing right by whoever I am working with.
+      </p>
+
+      <p>
+        More than willing — I am <span class="highlight">determined</span>. There is a difference between
+        someone who says they will try and someone who has already made up their mind that they are
+        going to deliver. I have made up my mind. Whatever it takes to learn this field, do the job
+        well, and grow into someone this team is glad they gave a chance — I am going to do that.
+        Not because it is easy, but because I want to earn it.
+      </p>
+
+    </div>
+
+    <!-- STRENGTHS -->
+    <div class="strengths-title">My Strengths</div>
+
+    <div class="strengths-grid">
+
+      <div class="strength-card">
+        <div class="icon">☀️</div>
+        <h3>Always Positive</h3>
+        <p>I bring good energy to whatever I am doing. A positive mindset helps me push through slow or repetitive tasks without losing focus.</p>
+      </div>
+
+      <div class="strength-card">
+        <div class="icon">🧘</div>
+        <h3>Patient & Calm</h3>
+        <p>I do not rush and I do not stress. I take things one step at a time and stay composed even when something is unclear or challenging.</p>
+      </div>
+
+      <div class="strength-card">
+        <div class="icon">🧠</div>
+        <h3>Emotionally Steady</h3>
+        <p>Criticism does not knock me off balance — it helps me improve. I keep my head clear and my focus on the output, not my ego.</p>
+      </div>
+
+      <div class="strength-card">
+        <div class="icon">🤝</div>
+        <h3>Easy to Work With</h3>
+        <p>Friendly, approachable, and genuinely good at getting along with people. I make the environment easier, not harder.</p>
+      </div>
+
+      <div class="strength-card">
+        <div class="icon">💪</div>
+        <h3>Determined</h3>
+        <p>Not just willing — decided. When I commit to delivering something, I follow it all the way through no matter how long it takes.</p>
+      </div>
+
+      <div class="strength-card">
+        <div class="icon">📖</div>
+        <h3>Ready to Learn</h3>
+        <p>Starting from zero does not scare me. I actively want to build knowledge in this field and I treat every task as a lesson.</p>
+      </div>
+
+    </div>
+
+    <!-- CLOSING QUOTE -->
+    <div class="quote-block">
+      <p>
+        "I may be starting from the bottom of the learning curve — but I am already moving.
+        Give me the work, give me the feedback, and watch what I do with it."
+      </p>
+      <div class="quote-author">— Kian Dave Galpa</div>
+    </div>
+
+  </main>
+
+  <footer>© 2026 Kian Dave Galpa · Background Summary · AI Data Annotator</footer>
+
+</body>
+</html>
