@@ -1,1 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Application Letter – AI Data Annotator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red: #e63b2e;
+      --dark: #0d0d0d;
+      --card: #1a1a1a;
+      --text: #f0ede8;
+      --muted: #888;
+    }
 
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* HEADER */
+    header {
+      border-bottom: 1px solid #2a2a2a;
+      padding: 60px 40px 50px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .label {
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(52px, 10vw, 96px);
+      line-height: 0.95;
+      letter-spacing: 0.02em;
+      color: var(--text);
+    }
+
+    h1 span { color: var(--red); }
+
+    .tagline {
+      margin-top: 20px;
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 480px;
+      line-height: 1.7;
+    }
+
+    /* MAIN */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+
+    /* LETTER CARD */
+    .letter-card {
+      background: var(--card);
+      border: 1px solid #2a2a2a;
+      border-radius: 8px;
+      padding: 48px 48px 40px;
+    }
+
+    .letter-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 36px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid #2a2a2a;
+    }
+
+    .letter-meta .to-block p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .letter-meta .to-block p strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .letter-meta .date {
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #555;
+    }
+
+    /* Subject badge */
+    .subject-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--red);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 8px 18px;
+      border-radius: 4px;
+      margin-bottom: 36px;
+    }
+
+    /* Salutation */
+    .salutation {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      letter-spacing: 0.05em;
+      color: var(--text);
+      margin-bottom: 28px;
+    }
+
+    /* Paragraphs */
+    .letter-body p {
+      font-size: 14px;
+      font-weight: 300;
+      color: #b0aca5;
+      line-height: 1.95;
+      margin-bottom: 22px;
+    }
+
+    .letter-body p .highlight {
+      color: var(--text);
+      font-weight: 500;
+      border-bottom: 1px solid var(--red);
+      padding-bottom: 1px;
+    }
+
+    /* Closing */
+    .closing {
+      margin-top: 36px;
+      padding-top: 28px;
+      border-top: 1px solid #2a2a2a;
+    }
+
+    .closing p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .sig-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 42px;
+      line-height: 0.95;
+      letter-spacing: 0.03em;
+      color: var(--text);
+      margin-top: 8px;
+    }
+
+    .sig-name span { color: var(--red); }
+
+    .sig-role {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-top: 8px;
+    }
+
+    /* Traits grid */
+    .traits {
+      margin-top: 60px;
+      padding-top: 60px;
+      border-top: 1px solid #2a2a2a;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .trait-card {
+      background: var(--card);
+      border: 1px solid #2a2a2a;
+      border-radius: 8px;
+      padding: 28px 28px 24px;
+    }
+
+    .trait-card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      letter-spacing: 0.05em;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .trait-card p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    .trait-card .badge {
+      display: inline-block;
+      margin-top: 14px;
+      background: #222;
+      border: 1px solid #333;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 11px;
+      color: var(--text);
+      letter-spacing: 0.05em;
+    }
+
+    /* FOOTER */
+    footer {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px 40px;
+      border-top: 1px solid #1e1e1e;
+      font-size: 12px;
+      color: #444;
+    }
+
+    @media (max-width: 600px) {
+      header, main { padding: 40px 20px; }
+      .letter-card { padding: 28px 22px; }
+      .traits { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="label">Application Letter · AI Data Annotator</div>
+    <h1>Kian<br>Dave<br><span>Galpa</span></h1>
+    <p class="tagline">
+      No experience yet — but full of drive, honesty, and the willingness
+      to put in the work to earn every bit of knowledge this role demands.
+    </p>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <div class="section-label">Formal Letter</div>
+
+    <div class="letter-card">
+
+      <!-- Meta -->
+      <div class="letter-meta">
+        <div class="to-block">
+          <p><strong>To:</strong> Hiring Manager</p>
+          <p><strong>Re:</strong> AI Data Annotator Position</p>
+          <p><strong>From:</strong> Kian Dave Galpa</p>
+        </div>
+        <div class="date">March 22, 2026</div>
+      </div>
+
+      <!-- Subject -->
+      <div class="subject-badge">▶ Application for AI Data Annotator</div>
+
+      <!-- Salutation -->
+      <div class="salutation">Dear Hiring Manager,</div>
+
+      <!-- Body -->
+      <div class="letter-body">
+
+        <p>
+          I am writing to apply for the position of
+          <span class="highlight">AI Data Annotator</span> at your organization.
+          I want to be upfront with you: I do not yet have formal experience in data annotation.
+          But I believe that honesty and a genuine desire to grow are worth more than credentials alone —
+          and both of those I have in full.
+        </p>
+
+        <p>
+          I am <span class="highlight">excited about this field</span> in a way that goes beyond just
+          needing a job. I want to understand it, master it, and build a real career out of it.
+          Data annotation sits at the very foundation of how AI systems learn and improve,
+          and knowing that the work I do directly contributes to that excites me deeply.
+          I am ready to learn everything — the tools, the guidelines, the quality standards —
+          whatever it takes to do this job right.
+        </p>
+
+        <p>
+          I understand that coming in without experience means I need to earn your trust
+          through my actions. I promise to approach every task with
+          <span class="highlight">full effort, careful attention, and a learner's mindset.</span>
+          I will not cut corners. If I do not know something, I will ask, research, and find out
+          rather than guess. I am the kind of person who takes ownership of their growth —
+          not just waiting for it to happen, but actively chasing it.
+        </p>
+
+        <p>
+          I am applying for this role because I genuinely need it, and I will not pretend otherwise.
+          But needing something and being willing to
+          <span class="highlight">work hard for it</span> are not contradictions —
+          they are the reason I will show up every single day and give my best.
+          Hardship before harvest. I believe in that deeply, and this role is the field
+          I want to plant my effort in.
+        </p>
+
+        <p>
+          I humbly ask for the chance to prove what I am capable of.
+          Given the opportunity, I will not waste it.
+          Thank you sincerely for your time and consideration.
+        </p>
+
+      </div>
+
+      <!-- Closing -->
+      <div class="closing">
+        <p>With respect and sincerity,</p>
+        <div class="sig-name">Kian Dave<br><span>Galpa</span></div>
+        <div class="sig-role">Applicant · AI Data Annotator</div>
+      </div>
+
+    </div>
+
+    <!-- TRAITS -->
+    <div class="traits">
+      <div class="trait-card">
+        <h3>What I Bring</h3>
+        <p>
+          A willingness to learn from zero. Strong attention to detail from video editing work.
+          The discipline to follow instructions precisely and consistently.
+        </p>
+        <span class="badge">🎯 Detail-Oriented</span>
+      </div>
+      <div class="trait-card">
+        <h3>My Promise</h3>
+        <p>
+          I will grow with the role. Every piece of feedback is a tool for improvement.
+          I am here for the long run — not just a paycheck, but a career.
+        </p>
+        <span class="badge">📈 Growth Mindset</span>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>© 2026 Kian Dave Galpa · Application Letter · AI Data Annotator</footer>
+
+</body>
+</html>
