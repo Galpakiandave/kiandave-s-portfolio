@@ -247,10 +247,24 @@
 
   <!-- HEADER -->
   <header>
-     <a href="index.html">
-        ▶ VIDEO EDITOR
-      </a>
-    
+    <a href="index.html" style="
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border: 1px solid #333;
+      border-radius: 4px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      transition: border-color 0.2s, color 0.2s;
+    " onmouseover="this.style.borderColor='#e63b2e';this.style.color='#e63b2e'"
+       onmouseout="this.style.borderColor='#333';this.style.color='#888'">
+      ◀ Video Editor
+    </a>
     <div class="label">Application Letter · AI Data Annotator</div>
     <h1>Kian<br>Dave<br><span>Galpa</span></h1>
     <p class="tagline">
